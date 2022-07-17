@@ -1,0 +1,7 @@
+As the self supervised learning is closing the gap to supervised learning. Contrastive learning, particularly, is receiving more interest from the research community. Recent paper, SimCLR using contrastive learning achieved accuracy on par with supervision method over Imagenet dataset. 
+
+However, one major limitation of contrastive learning methods, so far, is that they require a large number of negative samples to contrast with a positive sample, meaning bigger batch size, which requires more compute and time for convergence.
+
+We propose to, smartly, create batches using bootstrapping with image embeddings calculated using a pre-trained network. This will allow us to sample batches which have a good mix of negative and positive samples. This should avoid the requirement of using bigger batch size.
+
+Over this, we also use cross-model multi views for each image to maximize the mutual information between them using contrastive learning as cross modalities have semantic rich information. 
